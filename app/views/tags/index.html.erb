@@ -1,0 +1,17 @@
+<h1>Listing Tags</h1>
+<%= link_to "Main_page", controller: 'tasks' %>
+
+<%= search_form_for @q do |f| %>
+	<%= f.label :Tag %>
+	<%= f.search_field :name_cont %>
+	<%= f.submit %>
+<% end %>
+
+<table>
+  <% @tags.each do |tag| %>
+    <tr>
+      <td><%= tag.name %></td>
+      <td><%= link_to 'Show', tag_path(tag) %></td>
+    </tr>
+  <% end %>
+</table>
