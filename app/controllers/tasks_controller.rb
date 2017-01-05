@@ -17,6 +17,7 @@ class TasksController < ApplicationController
 	
   def show
     @task = Task.find(params[:id])
+	ExampleMailer.sample_email(@task).deliver
   end
  
   def edit
