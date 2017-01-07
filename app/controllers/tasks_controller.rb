@@ -3,7 +3,12 @@ class TasksController < ApplicationController
 	@q = Task.ransack(params[:q])
 	@tasks = @q.result(distinct: true)
 	@tasks.each do|task|
-		task.title = Date.parse(task.title)
+		day = Time.now - Time.parse(task.title)
+		# I send email to remind one hour before the task
+		if  (((day / 3600).to_f >= -1) && ((day / 3600).to_f < 0)) 
+			ExampleMailer.sample_email(task).deliver
+		end
+		task.title = Time.parse(task.title)
 	end
 	@tasks = @tasks.sort { |a,b| b[:title] <=> a[:title] }
 	@tasks = @tasks.sort_by { |a| a.completed ? 1 : 0 }
@@ -18,7 +23,6 @@ class TasksController < ApplicationController
 	
   def show
     @task = Task.find(params[:id])
-	ExampleMailer.sample_email(@task).deliver
   end
  
   def edit
