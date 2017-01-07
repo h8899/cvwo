@@ -11090,3 +11090,291 @@ Processing by TagsController#index as HTML
 Completed 200 OK in 86ms (Views: 68.6ms | ActiveRecord: 1.0ms)
 
 
+Started GET "/tags" for ::1 at 2017-01-07 09:44:56 +0700
+Processing by TagsController#index as HTML
+  [1m[36mTag Load (0.0ms)[0m  [1m[34mSELECT DISTINCT "tags".* FROM "tags"[0m
+  Rendering tags/index.html.erb within layouts/application
+  Rendered tags/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 94ms (Views: 67.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tags/3" for ::1 at 2017-01-07 09:44:58 +0700
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTag Load (0.0ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tags/show.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "taggings" ON "tasks"."id" = "taggings"."task_id" WHERE "taggings"."tag_id" = ?[0m  [["tag_id", 3]]
+  Rendered tags/show.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 100ms (Views: 82.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tasks" for ::1 at 2017-01-07 09:44:59 +0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT DISTINCT "tasks".* FROM "tasks"[0m
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 88ms (Views: 67.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tags/1" for ::1 at 2017-01-07 09:45:10 +0700
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTag Load (1.0ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tags/show.html.erb within layouts/application
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "taggings" ON "tasks"."id" = "taggings"."task_id" WHERE "taggings"."tag_id" = ?[0m  [["tag_id", 1]]
+  Rendered tags/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 87ms (Views: 69.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tags/6" for ::1 at 2017-01-07 09:45:15 +0700
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTag Load (0.0ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering tags/show.html.erb within layouts/application
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "taggings" ON "tasks"."id" = "taggings"."task_id" WHERE "taggings"."tag_id" = ?[0m  [["tag_id", 6]]
+  Rendered tags/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 85ms (Views: 68.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tags/6" for ::1 at 2017-01-07 09:45:19 +0700
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering tags/show.html.erb within layouts/application
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "taggings" ON "tasks"."id" = "taggings"."task_id" WHERE "taggings"."tag_id" = ?[0m  [["tag_id", 6]]
+  Rendered tags/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 87ms (Views: 70.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tags/6" for ::1 at 2017-01-07 09:45:56 +0700
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTag Load (0.0ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering tags/show.html.erb within layouts/application
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "taggings" ON "tasks"."id" = "taggings"."task_id" WHERE "taggings"."tag_id" = ?[0m  [["tag_id", 6]]
+  Rendered tags/show.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 86ms (Views: 68.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tags/14" for ::1 at 2017-01-07 09:45:59 +0700
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mTag Load (0.0ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering tags/show.html.erb within layouts/application
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "taggings" ON "tasks"."id" = "taggings"."task_id" WHERE "taggings"."tag_id" = ?[0m  [["tag_id", 14]]
+  Rendered tags/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 86ms (Views: 69.6ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/tags/14" for ::1 at 2017-01-07 09:46:02 +0700
+Processing by TagsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"VnlI7TwDqs+bS5hqV0RaR3EO6AK38/KjqDJ+slbRNdbSRh2Qy2ELs/Z42NhOHX1K6WC9ziztBJcmJ3kyLc1JbA==", "id"=>"14"}
+  [1m[36mTag Load (0.0ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "tags" WHERE "tags"."id" = ?[0m  [["id", 14]]
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tags
+Completed 302 Found in 18ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/tags" for ::1 at 2017-01-07 09:46:02 +0700
+Processing by TagsController#index as HTML
+  [1m[36mTag Load (0.0ms)[0m  [1m[34mSELECT DISTINCT "tags".* FROM "tags"[0m
+  Rendering tags/index.html.erb within layouts/application
+  Rendered tags/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 83ms (Views: 65.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tags/3" for ::1 at 2017-01-07 09:46:29 +0700
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTag Load (0.0ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tags/show.html.erb within layouts/application
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "taggings" ON "tasks"."id" = "taggings"."task_id" WHERE "taggings"."tag_id" = ?[0m  [["tag_id", 3]]
+  Rendered tags/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 85ms (Views: 70.3ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/tags/3" for ::1 at 2017-01-07 09:46:31 +0700
+Processing by TagsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"CMQ7gDEQYO8pG1Oo35Obzn3FI/4LkrI96EN35EBvT5uM+279xnLBk0QoExrGyrzD5at2MpCMRAlmVnBkO3MzIQ==", "id"=>"3"}
+  [1m[36mTag Load (1.0ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "tags" WHERE "tags"."id" = ?[0m  [["id", 3]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tags
+Completed 302 Found in 18ms (ActiveRecord: 13.0ms)
+
+
+Started GET "/tags" for ::1 at 2017-01-07 09:46:31 +0700
+Processing by TagsController#index as HTML
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "tags".* FROM "tags"[0m
+  Rendering tags/index.html.erb within layouts/application
+  Rendered tags/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 93ms (Views: 74.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tags/5" for ::1 at 2017-01-07 09:46:34 +0700
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering tags/show.html.erb within layouts/application
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "taggings" ON "tasks"."id" = "taggings"."task_id" WHERE "taggings"."tag_id" = ?[0m  [["tag_id", 5]]
+  Rendered tags/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 86ms (Views: 69.7ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/tags/5" for ::1 at 2017-01-07 09:46:37 +0700
+Processing by TagsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"CmuEgEV1ljhude2F7gXaNgg5DLttVmFXwQ7r03oVOrmOVNH9shc3RANGrTf3XP07kFdZd/ZIl2NPG+xTAQlGAw==", "id"=>"5"}
+  [1m[36mTag Load (0.0ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[31mDELETE FROM "tags" WHERE "tags"."id" = ?[0m  [["id", 5]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tags
+Completed 302 Found in 19ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/tags" for ::1 at 2017-01-07 09:46:37 +0700
+Processing by TagsController#index as HTML
+  [1m[36mTag Load (0.0ms)[0m  [1m[34mSELECT DISTINCT "tags".* FROM "tags"[0m
+  Rendering tags/index.html.erb within layouts/application
+  Rendered tags/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 87ms (Views: 69.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tags/6" for ::1 at 2017-01-07 09:46:38 +0700
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTag Load (1.0ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering tags/show.html.erb within layouts/application
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "taggings" ON "tasks"."id" = "taggings"."task_id" WHERE "taggings"."tag_id" = ?[0m  [["tag_id", 6]]
+  Rendered tags/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 90ms (Views: 68.7ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/tags/6" for ::1 at 2017-01-07 09:46:40 +0700
+Processing by TagsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8qqK+f/DYtoTue1SOctnmInQXBQWYlZyPP0/jL3MIjt2ld+ECKHDpn6KreAgkkCVEb4J2I18oEay6DgMxtBegQ==", "id"=>"6"}
+  [1m[36mTag Load (0.0ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.5ms)[0m  [1m[31mDELETE FROM "tags" WHERE "tags"."id" = ?[0m  [["id", 6]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tags
+Completed 302 Found in 15ms (ActiveRecord: 8.5ms)
+
+
+Started GET "/tags" for ::1 at 2017-01-07 09:46:40 +0700
+Processing by TagsController#index as HTML
+  [1m[36mTag Load (0.0ms)[0m  [1m[34mSELECT DISTINCT "tags".* FROM "tags"[0m
+  Rendering tags/index.html.erb within layouts/application
+  Rendered tags/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 83ms (Views: 65.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for ::1 at 2017-01-07 09:46:41 +0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT DISTINCT "tasks".* FROM "tasks"[0m
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 82ms (Views: 66.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/12" for ::1 at 2017-01-07 09:46:43 +0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering example_mailer/sample_email.html.erb within layouts/mailer
+  Rendered example_mailer/sample_email.html.erb within layouts/mailer (0.0ms)
+  Rendering example_mailer/sample_email.text.erb within layouts/mailer
+  Rendered example_mailer/sample_email.text.erb within layouts/mailer (1.0ms)
+ExampleMailer#sample_email: processed outbound mail in 160.4ms
+Sent mail to lth08091998@gmail.com (2006.2ms)
+Date: Sat, 07 Jan 2017 09:46:43 +0700
+From: letrunghieusingapore@gmail.com
+To: lth08091998@gmail.com
+Message-ID: <58705693bc7be_2f38341382428496@DESKTOP-LQBQLPP.mail>
+Subject: Hieu
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_58705693bbc4f_2f3834138242838c";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_58705693bbc4f_2f3834138242838c
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Sample mail sent using smtp.
+
+----==_mimepart_58705693bbc4f_2f3834138242838c
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_58705693bbc4f_2f3834138242838c--
+
+  Rendering tasks/show.html.erb within layouts/application
+  [1m[36mTag Load (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."task_id" = ?[0m  [["task_id", 12]]
+  Rendered tasks/show.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 2271ms (Views: 72.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tasks" for ::1 at 2017-01-07 09:46:48 +0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT DISTINCT "tasks".* FROM "tasks"[0m
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 82ms (Views: 64.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tags" for ::1 at 2017-01-07 09:46:56 +0700
+Processing by TagsController#index as HTML
+  [1m[36mTag Load (0.0ms)[0m  [1m[34mSELECT DISTINCT "tags".* FROM "tags"[0m
+  Rendering tags/index.html.erb within layouts/application
+  Rendered tags/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 90ms (Views: 72.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for ::1 at 2017-01-07 09:46:57 +0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT DISTINCT "tasks".* FROM "tasks"[0m
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 83ms (Views: 69.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tags" for ::1 at 2017-01-07 09:47:00 +0700
+Processing by TagsController#index as HTML
+  [1m[36mTag Load (1.0ms)[0m  [1m[34mSELECT DISTINCT "tags".* FROM "tags"[0m
+  Rendering tags/index.html.erb within layouts/application
+  Rendered tags/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 80ms (Views: 64.7ms | ActiveRecord: 1.0ms)
+
+
