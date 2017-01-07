@@ -6,6 +6,7 @@ class TasksController < ApplicationController
 		task.title = Date.parse(task.title)
 	end
 	@tasks = @tasks.sort { |a,b| b[:title] <=> a[:title] }
+	@tasks = @tasks.sort_by { |a| a.completed ? 1 : 0 }
   end
 
   def complete
@@ -54,7 +55,6 @@ end
  
   redirect_to tasks_path
 end
-
 
 private
   def task_params

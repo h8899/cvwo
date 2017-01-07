@@ -9655,3 +9655,1438 @@ Content-Transfer-Encoding: 7bit
 Completed 200 OK in 2272ms (Views: 72.1ms | ActiveRecord: 1.0ms)
 
 
+Started GET "/tasks/12" for ::1 at 2017-01-05 19:55:50 +0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering example_mailer/sample_email.html.erb within layouts/mailer
+  Rendered example_mailer/sample_email.html.erb within layouts/mailer (0.0ms)
+  Rendering example_mailer/sample_email.text.erb within layouts/mailer
+  Rendered example_mailer/sample_email.text.erb within layouts/mailer (0.0ms)
+ExampleMailer#sample_email: processed outbound mail in 159.1ms
+Sent mail to lth08091998@gmail.com (2007.1ms)
+Date: Thu, 05 Jan 2017 19:55:50 +0700
+From: letrunghieusingapore@gmail.com
+To: lth08091998@gmail.com
+Message-ID: <586e42564cda7_32a4370391c5337f@DESKTOP-LQBQLPP.mail>
+Subject: Hieu
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_586e42564c5d0_32a4370391c53225";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_586e42564c5d0_32a4370391c53225
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Sample mail sent using smtp.
+
+----==_mimepart_586e42564c5d0_32a4370391c53225
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_586e42564c5d0_32a4370391c53225--
+
+  Rendering tasks/show.html.erb within layouts/application
+  [1m[36mTag Load (1.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."task_id" = ?[0m  [["task_id", 12]]
+  Rendered tasks/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 2266ms (Views: 81.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-07 09:26:27 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+Started GET "/" for 127.0.0.1 at 2017-01-07 09:26:27 +0700
+  Rendering welcome/index.html.erb within layouts/application
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (30.1ms)
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 714ms (Views: 672.8ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 589ms (Views: 570.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-01-07 09:26:44 +0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT DISTINCT "tasks".* FROM "tasks"[0m
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (183.2ms)
+Completed 500 Internal Server Error in 258ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x0000000d202e18>:0x0000000d1f7f90>):
+    27:       <td><%= task.text %></td>
+    28:       <td><%= link_to 'Show', task_path(task) %></td>
+    29: 	  <div class="field">
+    30:     <%= f.label "Mark now" %> <br />
+    31:     <%= f.check_box :completed %> <br />
+    32: </div>
+    33:   <% end %>
+  
+app/views/tasks/index.html.erb:30:in `block in _app_views_tasks_index_html_erb___1014225223_110207400'
+app/views/tasks/index.html.erb:19:in `each'
+app/views/tasks/index.html.erb:19:in `_app_views_tasks_index_html_erb___1014225223_110207400'
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (1112.5ms)
+Started GET "/tasks" for ::1 at 2017-01-07 09:29:26 +0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT DISTINCT "tasks".* FROM "tasks"[0m
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (17.1ms)
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    26:       <td><%= task.title %></td>
+    27:       <td><%= task.text %></td>
+    28:       <td><%= link_to 'Show', task_path(task) %></td>
+    29: 	  <%= form_for(@user) do |f| %>
+    30: 	  <div class="field">
+    31:     <%= f.label "Mark now" %> <br />
+    32:     <%= f.check_box :completed %> <br />
+  
+app/views/tasks/index.html.erb:29:in `block in _app_views_tasks_index_html_erb___1014225223_107553740'
+app/views/tasks/index.html.erb:19:in `each'
+app/views/tasks/index.html.erb:19:in `_app_views_tasks_index_html_erb___1014225223_107553740'
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (1144.2ms)
+Started GET "/tasks" for ::1 at 2017-01-07 09:29:43 +0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT DISTINCT "tasks".* FROM "tasks"[0m
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (16.1ms)
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    26:       <td><%= task.title %></td>
+    27:       <td><%= task.text %></td>
+    28:       <td><%= link_to 'Show', task_path(task) %></td>
+    29: 	  <%= form_for(@task) do |f| %>
+    30: 	  <div class="field">
+    31:     <%= f.label "Mark now" %> <br />
+    32:     <%= f.check_box :completed %> <br />
+  
+app/views/tasks/index.html.erb:29:in `block in _app_views_tasks_index_html_erb___1014225223_116768640'
+app/views/tasks/index.html.erb:19:in `each'
+app/views/tasks/index.html.erb:19:in `_app_views_tasks_index_html_erb___1014225223_116768640'
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (1159.6ms)
+Started GET "/tasks" for ::1 at 2017-01-07 09:31:43 +0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT DISTINCT "tasks".* FROM "tasks"[0m
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (15.1ms)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    26:       <td><%= task.title %></td>
+    27:       <td><%= task.text %></td>
+    28:       <td><%= link_to 'Show', task_path(task) %></td>
+    29: 	  <%= form_for(@task) do |f| %>
+    30: 	  <div class="field">
+    31:     <%= f.label "Mark now" %> <br />
+    32:     <%= f.check_box :completed %> <br />
+  
+app/views/tasks/index.html.erb:29:in `block in _app_views_tasks_index_html_erb___1014225223_132009880'
+app/views/tasks/index.html.erb:19:in `each'
+app/views/tasks/index.html.erb:19:in `_app_views_tasks_index_html_erb___1014225223_132009880'
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (1148.6ms)
+Started GET "/tasks" for ::1 at 2017-01-07 09:31:59 +0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT DISTINCT "tasks".* FROM "tasks"[0m
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 1.0ms)
+
+
+  
+SyntaxError (C:/cvwo/app/views/tasks/index.html.erb:32: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/tasks/index.html.erb:32: syntax error, unexpected keyword_ensure, expecting end-of-input
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1089.2ms)
+Started GET "/tasks" for ::1 at 2017-01-07 09:32:25 +0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT DISTINCT "tasks".* FROM "tasks"[0m
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 84ms (Views: 66.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for ::1 at 2017-01-07 09:32:27 +0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (56.2ms)
+  Rendered tasks/new.html.erb within layouts/application (67.2ms)
+Completed 200 OK in 147ms (Views: 133.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/tasks" for ::1 at 2017-01-07 09:33:36 +0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ifgc05kPgPFUZxiMdU2f0VSr14f7fyuI7fKa0DU0/zGlx0mubm0hjTlUWD5sFLjczMWCS2Bh3bxj551QTiiDiw==", "task"=>{"title"=>"6/1", "text"=>"fsad", "tag_list"=>"qr", "completed"=>"1"}, "commit"=>"Create Task"}
+Unpermitted parameter: completed
+  [1m[36mTag Load (1.0ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."name" = ? LIMIT ?[0m  [["name", "qr"], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "qr"], ["created_at", 2017-01-07 02:33:36 UTC], ["updated_at", 2017-01-07 02:33:36 UTC]]
+  [1m[35m (12.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (4.0ms)
+  Rendered tasks/new.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 143ms (Views: 82.2ms | ActiveRecord: 20.3ms)
+
+
+Started POST "/tasks" for ::1 at 2017-01-07 09:33:40 +0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RwopdiD6KisiML3CM4bgXVmXwbyDM8DGr6doVSfvyUXDNXwL15iLV08D/XAq38dQwfmUcBgtNvIhsm/VXPO1/w==", "task"=>{"title"=>"6/1", "text"=>"fsadwe", "tag_list"=>"qr", "completed"=>"0"}, "commit"=>"Create Task"}
+Unpermitted parameter: completed
+  [1m[36mTag Load (0.0ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."name" = ? LIMIT ?[0m  [["name", "qr"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.5ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "text", "created_at", "updated_at", "completed") VALUES (?, ?, ?, ?, ?)[0m  [["title", "6/1"], ["text", "fsadwe"], ["created_at", 2017-01-07 02:33:40 UTC], ["updated_at", 2017-01-07 02:33:40 UTC], ["completed", false]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "taggings" ("tag_id", "task_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["tag_id", 10], ["task_id", 14], ["created_at", 2017-01-07 02:33:40 UTC], ["updated_at", 2017-01-07 02:33:40 UTC]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks/14
+Completed 302 Found in 23ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/tasks/14" for ::1 at 2017-01-07 09:33:40 +0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering example_mailer/sample_email.html.erb within layouts/mailer
+  Rendered example_mailer/sample_email.html.erb within layouts/mailer (0.5ms)
+  Rendering example_mailer/sample_email.text.erb within layouts/mailer
+  Rendered example_mailer/sample_email.text.erb within layouts/mailer (1.0ms)
+ExampleMailer#sample_email: processed outbound mail in 324.1ms
+Sent mail to lth08091998@gmail.com (2027.4ms)
+Date: Sat, 07 Jan 2017 09:33:41 +0700
+From: letrunghieusingapore@gmail.com
+To: lth08091998@gmail.com
+Message-ID: <587053851940b_2f38341370c260f4@DESKTOP-LQBQLPP.mail>
+Subject: Hieu
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_58705385168f6_2f38341370c2595d";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_58705385168f6_2f38341370c2595d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Sample mail sent using smtp.
+
+----==_mimepart_58705385168f6_2f38341370c2595d
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_58705385168f6_2f38341370c2595d--
+
+  Rendering tasks/show.html.erb within layouts/application
+  [1m[36mTag Load (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."task_id" = ?[0m  [["task_id", 14]]
+  Rendered tasks/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 2839ms (Views: 71.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for ::1 at 2017-01-07 09:33:45 +0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT DISTINCT "tasks".* FROM "tasks"[0m
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 112ms (Views: 92.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tasks/14" for ::1 at 2017-01-07 09:33:48 +0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering example_mailer/sample_email.html.erb within layouts/mailer
+  Rendered example_mailer/sample_email.html.erb within layouts/mailer (0.0ms)
+  Rendering example_mailer/sample_email.text.erb within layouts/mailer
+  Rendered example_mailer/sample_email.text.erb within layouts/mailer (0.0ms)
+ExampleMailer#sample_email: processed outbound mail in 156.5ms
+Sent mail to lth08091998@gmail.com (2007.0ms)
+Date: Sat, 07 Jan 2017 09:33:48 +0700
+From: letrunghieusingapore@gmail.com
+To: lth08091998@gmail.com
+Message-ID: <5870538c725e1_2f38341379826299@DESKTOP-LQBQLPP.mail>
+Subject: Hieu
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5870538c71a20_2f383413798261f";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5870538c71a20_2f383413798261f
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Sample mail sent using smtp.
+
+----==_mimepart_5870538c71a20_2f383413798261f
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_5870538c71a20_2f383413798261f--
+
+  Rendering tasks/show.html.erb within layouts/application
+  [1m[36mTag Load (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."task_id" = ?[0m  [["task_id", 14]]
+  Rendered tasks/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 2255ms (Views: 69.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/complete/14" for ::1 at 2017-01-07 09:33:52 +0700
+Processing by TasksController#complete as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", true], ["updated_at", 2017-01-07 02:33:52 UTC], ["id", 14]]
+  [1m[35m (19.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 35ms (ActiveRecord: 21.9ms)
+
+
+Started GET "/tasks" for ::1 at 2017-01-07 09:33:52 +0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT DISTINCT "tasks".* FROM "tasks"[0m
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 78ms (Views: 61.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for ::1 at 2017-01-07 09:33:54 +0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (3.0ms)
+  Rendered tasks/new.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 91ms (Views: 76.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for ::1 at 2017-01-07 09:34:05 +0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yuU/KH4R5UUD2Xcswm/AiW1oj951qTtUWLZqaRxCUKtO2mpViXNEOW7qN57bNueE9QbaEu63zWDWo23pZ14sEQ==", "task"=>{"title"=>"12/2", "text"=>"fasfw", "tag_list"=>"wrwrw", "completed"=>"0"}, "commit"=>"Create Task"}
+Unpermitted parameter: completed
+  [1m[36mTag Load (0.0ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."name" = ? LIMIT ?[0m  [["name", "wrwrw"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "wrwrw"], ["created_at", 2017-01-07 02:34:05 UTC], ["updated_at", 2017-01-07 02:34:05 UTC]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "text", "created_at", "updated_at", "completed") VALUES (?, ?, ?, ?, ?)[0m  [["title", "12/2"], ["text", "fasfw"], ["created_at", 2017-01-07 02:34:05 UTC], ["updated_at", 2017-01-07 02:34:05 UTC], ["completed", false]]
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "taggings" ("tag_id", "task_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["tag_id", 11], ["task_id", 15], ["created_at", 2017-01-07 02:34:05 UTC], ["updated_at", 2017-01-07 02:34:05 UTC]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks/15
+Completed 302 Found in 47ms (ActiveRecord: 23.1ms)
+
+
+Started GET "/tasks/15" for ::1 at 2017-01-07 09:34:05 +0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering example_mailer/sample_email.html.erb within layouts/mailer
+  Rendered example_mailer/sample_email.html.erb within layouts/mailer (0.0ms)
+  Rendering example_mailer/sample_email.text.erb within layouts/mailer
+  Rendered example_mailer/sample_email.text.erb within layouts/mailer (0.0ms)
+ExampleMailer#sample_email: processed outbound mail in 158.4ms
+Sent mail to lth08091998@gmail.com (2008.2ms)
+Date: Sat, 07 Jan 2017 09:34:06 +0700
+From: letrunghieusingapore@gmail.com
+To: lth08091998@gmail.com
+Message-ID: <5870539e26fbc_2f38341370c264ed@DESKTOP-LQBQLPP.mail>
+Subject: Hieu
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5870539e263fc_2f38341370c26361";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5870539e263fc_2f38341370c26361
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Sample mail sent using smtp.
+
+----==_mimepart_5870539e263fc_2f38341370c26361
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_5870539e263fc_2f38341370c26361--
+
+  Rendering tasks/show.html.erb within layouts/application
+  [1m[36mTag Load (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."task_id" = ?[0m  [["task_id", 15]]
+  Rendered tasks/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 2258ms (Views: 68.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for ::1 at 2017-01-07 09:34:09 +0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "tasks".* FROM "tasks"[0m
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 91ms (Views: 73.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tasks/new" for ::1 at 2017-01-07 09:34:15 +0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (4.0ms)
+  Rendered tasks/new.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 100ms (Views: 85.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for ::1 at 2017-01-07 09:34:26 +0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ee6R6gjv3PaACNYl1BeTjUdsbAYGvB9OwI6sKh0buR+V0cSX/419iu07lpfNTrSA3wI5yp2i6XpOm6uqZgfFpQ==", "task"=>{"title"=>"11/1", "text"=>"gfrwwrgwrgsfag", "tag_list"=>"rwqrw", "completed"=>"1"}, "commit"=>"Create Task"}
+Unpermitted parameter: completed
+  [1m[36mTag Load (1.0ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."name" = ? LIMIT ?[0m  [["name", "rwqrw"], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "rwqrw"], ["created_at", 2017-01-07 02:34:26 UTC], ["updated_at", 2017-01-07 02:34:26 UTC]]
+  [1m[35m (7.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "text", "created_at", "updated_at", "completed") VALUES (?, ?, ?, ?, ?)[0m  [["title", "11/1"], ["text", "gfrwwrgwrgsfag"], ["created_at", 2017-01-07 02:34:26 UTC], ["updated_at", 2017-01-07 02:34:26 UTC], ["completed", false]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "taggings" ("tag_id", "task_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["tag_id", 12], ["task_id", 16], ["created_at", 2017-01-07 02:34:26 UTC], ["updated_at", 2017-01-07 02:34:26 UTC]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks/16
+Completed 302 Found in 42ms (ActiveRecord: 19.5ms)
+
+
+Started GET "/tasks/16" for ::1 at 2017-01-07 09:34:27 +0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  Rendering example_mailer/sample_email.html.erb within layouts/mailer
+  Rendered example_mailer/sample_email.html.erb within layouts/mailer (0.0ms)
+  Rendering example_mailer/sample_email.text.erb within layouts/mailer
+  Rendered example_mailer/sample_email.text.erb within layouts/mailer (1.0ms)
+ExampleMailer#sample_email: processed outbound mail in 154.4ms
+Sent mail to lth08091998@gmail.com (2009.9ms)
+Date: Sat, 07 Jan 2017 09:34:27 +0700
+From: letrunghieusingapore@gmail.com
+To: lth08091998@gmail.com
+Message-ID: <587053b32ea5a_2f383413824266e9@DESKTOP-LQBQLPP.mail>
+Subject: Hieu
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_587053b32e285_2f3834138242652b";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_587053b32e285_2f3834138242652b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Sample mail sent using smtp.
+
+----==_mimepart_587053b32e285_2f3834138242652b
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_587053b32e285_2f3834138242652b--
+
+  Rendering tasks/show.html.erb within layouts/application
+  [1m[36mTag Load (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."task_id" = ?[0m  [["task_id", 16]]
+  Rendered tasks/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 2252ms (Views: 68.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for ::1 at 2017-01-07 09:34:31 +0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT DISTINCT "tasks".* FROM "tasks"[0m
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 83ms (Views: 64.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tasks/15" for ::1 at 2017-01-07 09:34:35 +0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering example_mailer/sample_email.html.erb within layouts/mailer
+  Rendered example_mailer/sample_email.html.erb within layouts/mailer (0.0ms)
+  Rendering example_mailer/sample_email.text.erb within layouts/mailer
+  Rendered example_mailer/sample_email.text.erb within layouts/mailer (1.0ms)
+ExampleMailer#sample_email: processed outbound mail in 170.1ms
+Sent mail to lth08091998@gmail.com (2007.2ms)
+Date: Sat, 07 Jan 2017 09:34:35 +0700
+From: letrunghieusingapore@gmail.com
+To: lth08091998@gmail.com
+Message-ID: <587053bbba083_2f38341370c2682e@DESKTOP-LQBQLPP.mail>
+Subject: Hieu
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_587053bbb94c1_2f38341370c2671f";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_587053bbb94c1_2f38341370c2671f
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Sample mail sent using smtp.
+
+----==_mimepart_587053bbb94c1_2f38341370c2671f
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_587053bbb94c1_2f38341370c2671f--
+
+  Rendering tasks/show.html.erb within layouts/application
+  [1m[36mTag Load (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."task_id" = ?[0m  [["task_id", 15]]
+  Rendered tasks/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 2266ms (Views: 68.4ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/tasks/15" for ::1 at 2017-01-07 09:34:40 +0700
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"wXArodbDe0e5qtn3UjTXV+XDd3kCWAg7f8cmXWQ9CwxFT37cIaHaO9SZmUVLbfBafa0itZlG/g/x0iHdHyF3tg==", "id"=>"15"}
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 15]]
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 19ms (ActiveRecord: 11.0ms)
+
+
+Started GET "/tasks" for ::1 at 2017-01-07 09:34:40 +0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT DISTINCT "tasks".* FROM "tasks"[0m
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 76ms (Views: 62.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tasks/16" for ::1 at 2017-01-07 09:34:42 +0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  Rendering example_mailer/sample_email.html.erb within layouts/mailer
+  Rendered example_mailer/sample_email.html.erb within layouts/mailer (0.0ms)
+  Rendering example_mailer/sample_email.text.erb within layouts/mailer
+  Rendered example_mailer/sample_email.text.erb within layouts/mailer (0.0ms)
+ExampleMailer#sample_email: processed outbound mail in 163.5ms
+Sent mail to lth08091998@gmail.com (2007.5ms)
+Date: Sat, 07 Jan 2017 09:34:42 +0700
+From: letrunghieusingapore@gmail.com
+To: lth08091998@gmail.com
+Message-ID: <587053c2ccf7b_2f3834137982705@DESKTOP-LQBQLPP.mail>
+Subject: Hieu
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_587053c2cc7c2_2f3834137982691f";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_587053c2cc7c2_2f3834137982691f
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Sample mail sent using smtp.
+
+----==_mimepart_587053c2cc7c2_2f3834137982691f
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_587053c2cc7c2_2f3834137982691f--
+
+  Rendering tasks/show.html.erb within layouts/application
+  [1m[36mTag Load (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."task_id" = ?[0m  [["task_id", 16]]
+  Rendered tasks/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 2262ms (Views: 73.1ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/tasks/16" for ::1 at 2017-01-07 09:34:47 +0700
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+1tz6pESuhhSBihuwPmo+bbZipcsexI3cbJynsd6VGt/ZCaXZnAbZD81aNzZoI/0LrffW7dl5AP/p3UevGYo0Q==", "id"=>"16"}
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 16]]
+  [1m[35m (13.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 23ms (ActiveRecord: 16.5ms)
+
+
+Started GET "/tasks" for ::1 at 2017-01-07 09:34:47 +0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT DISTINCT "tasks".* FROM "tasks"[0m
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 80ms (Views: 65.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tasks/14" for ::1 at 2017-01-07 09:34:49 +0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering example_mailer/sample_email.html.erb within layouts/mailer
+  Rendered example_mailer/sample_email.html.erb within layouts/mailer (1.0ms)
+  Rendering example_mailer/sample_email.text.erb within layouts/mailer
+  Rendered example_mailer/sample_email.text.erb within layouts/mailer (0.0ms)
+ExampleMailer#sample_email: processed outbound mail in 161.5ms
+Sent mail to lth08091998@gmail.com (2007.9ms)
+Date: Sat, 07 Jan 2017 09:34:49 +0700
+From: letrunghieusingapore@gmail.com
+To: lth08091998@gmail.com
+Message-ID: <587053c961075_2f3834136802726c@DESKTOP-LQBQLPP.mail>
+Subject: Hieu
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_587053c9600ca_2f38341368027113";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_587053c9600ca_2f38341368027113
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Sample mail sent using smtp.
+
+----==_mimepart_587053c9600ca_2f38341368027113
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_587053c9600ca_2f38341368027113--
+
+  Rendering tasks/show.html.erb within layouts/application
+  [1m[36mTag Load (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."task_id" = ?[0m  [["task_id", 14]]
+  Rendered tasks/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 2260ms (Views: 66.9ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/tasks/14" for ::1 at 2017-01-07 09:34:54 +0700
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4W6ubf7PZRy83sVsaw/uizDX/nM/IVAwd9mRDoww7cdlUfsQCa3EYNHthd5yVsmGqLmrv6Q/pgT5zJaO9yyRfQ==", "id"=>"14"}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 14]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 16ms (ActiveRecord: 8.5ms)
+
+
+Started GET "/tasks" for ::1 at 2017-01-07 09:34:54 +0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT DISTINCT "tasks".* FROM "tasks"[0m
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 81ms (Views: 64.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/12" for ::1 at 2017-01-07 09:34:55 +0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering example_mailer/sample_email.html.erb within layouts/mailer
+  Rendered example_mailer/sample_email.html.erb within layouts/mailer (0.0ms)
+  Rendering example_mailer/sample_email.text.erb within layouts/mailer
+  Rendered example_mailer/sample_email.text.erb within layouts/mailer (0.0ms)
+ExampleMailer#sample_email: processed outbound mail in 157.0ms
+Sent mail to lth08091998@gmail.com (2006.8ms)
+Date: Sat, 07 Jan 2017 09:34:55 +0700
+From: letrunghieusingapore@gmail.com
+To: lth08091998@gmail.com
+Message-ID: <587053cfa8151_2f3834135f4274da@DESKTOP-LQBQLPP.mail>
+Subject: Hieu
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_587053cfa797b_2f3834135f4273a6";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_587053cfa797b_2f3834135f4273a6
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Sample mail sent using smtp.
+
+----==_mimepart_587053cfa797b_2f3834135f4273a6
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_587053cfa797b_2f3834135f4273a6--
+
+  Rendering tasks/show.html.erb within layouts/application
+  [1m[36mTag Load (1.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."task_id" = ?[0m  [["task_id", 12]]
+  Rendered tasks/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 2256ms (Views: 70.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/tasks/complete/12" for ::1 at 2017-01-07 09:34:59 +0700
+Processing by TasksController#complete as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", true], ["updated_at", 2017-01-07 02:34:59 UTC], ["id", 12]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 21ms (ActiveRecord: 11.0ms)
+
+
+Started GET "/tasks" for ::1 at 2017-01-07 09:34:59 +0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT DISTINCT "tasks".* FROM "tasks"[0m
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 83ms (Views: 64.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tasks" for ::1 at 2017-01-07 09:36:00 +0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT DISTINCT "tasks".* FROM "tasks"[0m
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 83ms (Views: 65.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for ::1 at 2017-01-07 09:36:02 +0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (19.1ms)
+  Rendered tasks/new.html.erb within layouts/application (33.1ms)
+Completed 500 Internal Server Error in 82ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `send_email' for #<Task:0x0000000f7ec868>):
+    36: 
+    37: <div class="field">
+    38:     <%= f.label "Get Email" %> <br />
+    39:     <%= f.check_box :send_email %> <br />
+    40: </div>
+    41:   <p>
+    42:     <%= f.submit %>
+  
+app/views/tasks/_form.html.erb:39:in `block in _app_views_tasks__form_html_erb___906962335_132273420'
+app/views/tasks/_form.html.erb:1:in `_app_views_tasks__form_html_erb___906962335_132273420'
+app/views/tasks/new.html.erb:3:in `_app_views_tasks_new_html_erb___438267278_128940380'
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (1126.0ms)
+Started GET "/tasks/new" for ::1 at 2017-01-07 09:36:23 +0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (4.0ms)
+  Rendered tasks/new.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 89ms (Views: 74.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for ::1 at 2017-01-07 09:36:44 +0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (9.0ms)
+  Rendered tasks/new.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 102ms (Views: 87.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for ::1 at 2017-01-07 09:36:54 +0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NYu/l3uopI6eIwWSSnsNKz+qxUkGVRujiz0GcbnXA0OxtOrqjMoF8vMQRSBTIiomp8SQhZ1L7ZcFKAHxwst/+Q==", "task"=>{"title"=>"1/1", "text"=>"afdsgfsg", "tag_list"=>"qrrqew", "completed"=>"1"}, "commit"=>"Create Task"}
+Unpermitted parameter: completed
+  [1m[36mTag Load (1.0ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."name" = ? LIMIT ?[0m  [["name", "qrrqew"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "qrrqew"], ["created_at", 2017-01-07 02:36:54 UTC], ["updated_at", 2017-01-07 02:36:54 UTC]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "text", "created_at", "updated_at", "completed") VALUES (?, ?, ?, ?, ?)[0m  [["title", "1/1"], ["text", "afdsgfsg"], ["created_at", 2017-01-07 02:36:54 UTC], ["updated_at", 2017-01-07 02:36:54 UTC], ["completed", false]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "taggings" ("tag_id", "task_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["tag_id", 13], ["task_id", 17], ["created_at", 2017-01-07 02:36:54 UTC], ["updated_at", 2017-01-07 02:36:54 UTC]]
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks/17
+Completed 302 Found in 43ms (ActiveRecord: 20.6ms)
+
+
+Started GET "/tasks/17" for ::1 at 2017-01-07 09:36:54 +0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering example_mailer/sample_email.html.erb within layouts/mailer
+  Rendered example_mailer/sample_email.html.erb within layouts/mailer (0.0ms)
+  Rendering example_mailer/sample_email.text.erb within layouts/mailer
+  Rendered example_mailer/sample_email.text.erb within layouts/mailer (0.5ms)
+ExampleMailer#sample_email: processed outbound mail in 168.5ms
+Sent mail to lth08091998@gmail.com (2008.2ms)
+Date: Sat, 07 Jan 2017 09:36:54 +0700
+From: letrunghieusingapore@gmail.com
+To: lth08091998@gmail.com
+Message-ID: <587054464a65a_2f3834135f427613@DESKTOP-LQBQLPP.mail>
+Subject: Hieu
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5870544649c8f_2f3834135f42759f";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5870544649c8f_2f3834135f42759f
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Sample mail sent using smtp.
+
+----==_mimepart_5870544649c8f_2f3834135f42759f
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_5870544649c8f_2f3834135f42759f--
+
+  Rendering tasks/show.html.erb within layouts/application
+  [1m[36mTag Load (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."task_id" = ?[0m  [["task_id", 17]]
+  Rendered tasks/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 2269ms (Views: 72.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for ::1 at 2017-01-07 09:36:58 +0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT DISTINCT "tasks".* FROM "tasks"[0m
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 91ms (Views: 73.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/17" for ::1 at 2017-01-07 09:37:01 +0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering example_mailer/sample_email.html.erb within layouts/mailer
+  Rendered example_mailer/sample_email.html.erb within layouts/mailer (0.0ms)
+  Rendering example_mailer/sample_email.text.erb within layouts/mailer
+  Rendered example_mailer/sample_email.text.erb within layouts/mailer (0.0ms)
+ExampleMailer#sample_email: processed outbound mail in 173.8ms
+Sent mail to lth08091998@gmail.com (2008.9ms)
+Date: Sat, 07 Jan 2017 09:37:01 +0700
+From: letrunghieusingapore@gmail.com
+To: lth08091998@gmail.com
+Message-ID: <5870544d40d95_2f38341370c278c5@DESKTOP-LQBQLPP.mail>
+Subject: Hieu
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5870544d405bf_2f38341370c2774c";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5870544d405bf_2f38341370c2774c
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Sample mail sent using smtp.
+
+----==_mimepart_5870544d405bf_2f38341370c2774c
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_5870544d405bf_2f38341370c2774c--
+
+  Rendering tasks/show.html.erb within layouts/application
+  [1m[36mTag Load (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."task_id" = ?[0m  [["task_id", 17]]
+  Rendered tasks/show.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 2276ms (Views: 73.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tasks/complete/17" for ::1 at 2017-01-07 09:37:05 +0700
+Processing by TasksController#complete as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", true], ["updated_at", 2017-01-07 02:37:05 UTC], ["id", 17]]
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 22ms (ActiveRecord: 8.9ms)
+
+
+Started GET "/tasks" for ::1 at 2017-01-07 09:37:05 +0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT DISTINCT "tasks".* FROM "tasks"[0m
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 91ms (Views: 71.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tasks/17" for ::1 at 2017-01-07 09:37:06 +0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering example_mailer/sample_email.html.erb within layouts/mailer
+  Rendered example_mailer/sample_email.html.erb within layouts/mailer (0.0ms)
+  Rendering example_mailer/sample_email.text.erb within layouts/mailer
+  Rendered example_mailer/sample_email.text.erb within layouts/mailer (0.0ms)
+ExampleMailer#sample_email: processed outbound mail in 162.7ms
+Sent mail to lth08091998@gmail.com (2005.9ms)
+Date: Sat, 07 Jan 2017 09:37:07 +0700
+From: letrunghieusingapore@gmail.com
+To: lth08091998@gmail.com
+Message-ID: <58705453158a6_2f383413798280dc@DESKTOP-LQBQLPP.mail>
+Subject: Hieu
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_58705453150d0_2f3834137982797b";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_58705453150d0_2f3834137982797b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Sample mail sent using smtp.
+
+----==_mimepart_58705453150d0_2f3834137982797b
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_58705453150d0_2f3834137982797b--
+
+  Rendering tasks/show.html.erb within layouts/application
+  [1m[36mTag Load (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."task_id" = ?[0m  [["task_id", 17]]
+  Rendered tasks/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 2260ms (Views: 71.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/complete/17" for ::1 at 2017-01-07 09:37:10 +0700
+Processing by TasksController#complete as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 6ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/tasks" for ::1 at 2017-01-07 09:37:10 +0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT DISTINCT "tasks".* FROM "tasks"[0m
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 81ms (Views: 65.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tasks" for ::1 at 2017-01-07 09:39:50 +0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT DISTINCT "tasks".* FROM "tasks"[0m
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 2.0ms)
+
+
+  
+NoMethodError (undefined method `thing' for #<Task:0x0000000d410070>):
+  
+app/controllers/tasks_controller.rb:9:in `block in index'
+app/controllers/tasks_controller.rb:9:in `each'
+app/controllers/tasks_controller.rb:9:in `sort_by'
+app/controllers/tasks_controller.rb:9:in `index'
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1170.1ms)
+Started GET "/tasks" for ::1 at 2017-01-07 09:40:12 +0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT DISTINCT "tasks".* FROM "tasks"[0m
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 94ms (Views: 67.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tasks/new" for ::1 at 2017-01-07 09:40:17 +0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (16.1ms)
+  Rendered tasks/new.html.erb within layouts/application (28.1ms)
+Completed 200 OK in 110ms (Views: 96.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for ::1 at 2017-01-07 09:40:25 +0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IUvJtFzKbFTc4nJq8z/+V0y326Ur3nj2I826fhDDXLqldJzJq6jNKLHRMtjqZtla1NmOabDAjsKt2L3+a98gAA==", "task"=>{"title"=>"1/1", "text"=>"sadfsgsffsgfsg", "tag_list"=>"a"}, "commit"=>"Create Task"}
+  [1m[36mTag Load (0.0ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."name" = ? LIMIT ?[0m  [["name", "a"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "a"], ["created_at", 2017-01-07 02:40:25 UTC], ["updated_at", 2017-01-07 02:40:25 UTC]]
+  [1m[35m (11.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "text", "created_at", "updated_at", "completed") VALUES (?, ?, ?, ?, ?)[0m  [["title", "1/1"], ["text", "sadfsgsffsgfsg"], ["created_at", 2017-01-07 02:40:25 UTC], ["updated_at", 2017-01-07 02:40:25 UTC], ["completed", false]]
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "taggings" ("tag_id", "task_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["tag_id", 14], ["task_id", 18], ["created_at", 2017-01-07 02:40:25 UTC], ["updated_at", 2017-01-07 02:40:25 UTC]]
+  [1m[35m (9.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks/18
+Completed 302 Found in 58ms (ActiveRecord: 25.6ms)
+
+
+Started GET "/tasks/18" for ::1 at 2017-01-07 09:40:25 +0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering example_mailer/sample_email.html.erb within layouts/mailer
+  Rendered example_mailer/sample_email.html.erb within layouts/mailer (0.0ms)
+  Rendering example_mailer/sample_email.text.erb within layouts/mailer
+  Rendered example_mailer/sample_email.text.erb within layouts/mailer (0.0ms)
+ExampleMailer#sample_email: processed outbound mail in 167.0ms
+Sent mail to lth08091998@gmail.com (2007.2ms)
+Date: Sat, 07 Jan 2017 09:40:25 +0700
+From: letrunghieusingapore@gmail.com
+To: lth08091998@gmail.com
+Message-ID: <58705519c5272_2f383413680282f3@DESKTOP-LQBQLPP.mail>
+Subject: Hieu
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_58705519c4aa1_2f38341368028156";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_58705519c4aa1_2f38341368028156
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Sample mail sent using smtp.
+
+----==_mimepart_58705519c4aa1_2f38341368028156
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_58705519c4aa1_2f38341368028156--
+
+  Rendering tasks/show.html.erb within layouts/application
+  [1m[36mTag Load (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."task_id" = ?[0m  [["task_id", 18]]
+  Rendered tasks/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 2281ms (Views: 74.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for ::1 at 2017-01-07 09:40:29 +0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "tasks".* FROM "tasks"[0m
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 81ms (Views: 63.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tasks" for ::1 at 2017-01-07 09:40:48 +0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT DISTINCT "tasks".* FROM "tasks"[0m
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 95ms (Views: 66.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/tasks/new" for ::1 at 2017-01-07 09:40:58 +0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (14.1ms)
+  Rendered tasks/new.html.erb within layouts/application (26.1ms)
+Completed 200 OK in 105ms (Views: 91.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for ::1 at 2017-01-07 09:41:08 +0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (3.0ms)
+  Rendered tasks/new.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 92ms (Views: 75.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tags" for ::1 at 2017-01-07 09:41:11 +0700
+Processing by TagsController#index as HTML
+  [1m[36mTag Load (0.0ms)[0m  [1m[34mSELECT DISTINCT "tags".* FROM "tags"[0m
+  Rendering tags/index.html.erb within layouts/application
+  Rendered tags/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 94ms (Views: 68.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tags" for ::1 at 2017-01-07 09:41:16 +0700
+Processing by TagsController#index as HTML
+  [1m[36mTag Load (1.0ms)[0m  [1m[34mSELECT DISTINCT "tags".* FROM "tags"[0m
+  Rendering tags/index.html.erb within layouts/application
+  Rendered tags/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 86ms (Views: 68.6ms | ActiveRecord: 1.0ms)
+
+
