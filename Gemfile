@@ -10,6 +10,7 @@ end
 gem 'rails', '~> 5.0.1'
 gem 'ransack'
 gem "figaro"
+gem 'whenever', :require => false
 # Last officially released gem
 # gem "meta_search", :git => "git://github.com/ernie/meta_search.git" # Track git repo
 # Use sqlite3 as the database for Active Record

@@ -40,8 +40,8 @@ class TasksController < ApplicationController
 		redirect_to @task
 	else
 		render 'new'
+	end
   end
-end
  
 def update
   @task = Task.find(params[:id])
