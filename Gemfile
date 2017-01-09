@@ -10,14 +10,15 @@ end
 gem 'rails', '~> 5.0.1'
 gem 'ransack'
 gem "figaro"
-# Last officially released gem
-# gem "meta_search", :git => "git://github.com/ernie/meta_search.git" # Track git repo
-# Use sqlite3 as the database for Active Record
+gem 'whenever', :require => false
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
+# Use SCSS for stylesheets
+gem 'sass-rails', '~> 5.0'
 gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views

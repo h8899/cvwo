@@ -1,5 +1,7 @@
 <h1>Listing Tasks</h1>
-<%= link_to 'New task', new_task_path %>
+<%= link_to new_task_path, class: 'btn btn-success' do%>
+ <i class="glyphicon glyphicon-plus"></i> New Task
+<% end %>
 <%= link_to 'Tags list', controller: 'tags' %>
 
 <%= search_form_for @q do |f| %>
@@ -8,7 +10,7 @@
 	<%= f.submit %>
 <% end %>
 
-<table>
+<table class = 'table table-bordered'>
   <tr>
 	<th>Status</th>
     <th>Time</th>
@@ -19,12 +21,16 @@
   <% @tasks.each do |task| %>
     <tr>
 	  <% if task.completed == true %>
-		<td> Completed </td>
+		<td class = 'active'> Completed </td>
 	  <% else %>
-		<td> Not completed </td>
-	  <%end%>
-      <td><%= task.title %></td>
-      <td><%= task.text %></td>
-      <td><%= link_to 'Show', task_path(task) %></td>
+		<td class = 'active'> Not completed </td>
+	  <%end%> 
+      <td class = 'success'><%= task.title %>  </td>
+      <td class = 'info'><%= task.text %>  </td> 
+      <td><%= link_to 'Show', task_path(task), class: 'btn btn-primary btn-xs' %></td>
+	  <td><%= link_to 'Edit', edit_task_path(task), class: 'btn btn-info btn-xs'  %></td>
+	  <td><%= link_to 'Destroy', task_path(task),
+              method: :delete,
+              data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-xs' %></td>
   <% end %>
 </table>

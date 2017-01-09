@@ -1,0 +1,2 @@
+ERROR: "bundle show" was called with arguments ["bootstrap-sass,", "~"]
+Usage: "bundle show GEM [OPTIONS]"

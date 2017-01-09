@@ -3,7 +3,7 @@ class Task < ApplicationRecord
                     length: { minimum: 5 }
 	has_many :taggings
 	has_many :tags, through: :taggings
-   
+	
 	def self.send_reminder
 		@tasks = Task.all
 		@tasks.each do|task|
@@ -14,7 +14,7 @@ class Task < ApplicationRecord
 			end
 		end
 	end
-  
+	
 	def tag_list
 		self.tags.collect do |tag|
 			tag.name

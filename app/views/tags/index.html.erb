@@ -7,11 +7,14 @@
 	<%= f.submit %>
 <% end %>
 
-<table>
+<table class = 'table'>
   <% @tags.each do |tag| %>
     <tr>
-      <td><%= tag.name %></td>
-      <td><%= link_to 'Show', tag_path(tag) %></td>
+      <td class = 'active'><%= tag.name %></td>
+      <td><%= link_to 'Show', tag_path(tag), class: 'btn btn-info btn-xs' %> | 
+	  <%= link_to 'Destroy', tag_path(tag),
+              method: :delete,
+              data: { confirm: 'Are you sure?', class: 'btn btn-danger btn-xs'  } %> </td>
     </tr>
   <% end %>
 </table>
