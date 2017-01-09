@@ -25,7 +25,11 @@
 	  <% else %>
 		<td class = 'active'> Not completed </td>
 	  <%end%> 
-      <td class = 'success'><%= task.title %>  </td>
+      <td>
+		<span class="has-tooltip" data-toggle="tooltip" title="<%= "Created on #{task.created_at.strftime("%m/%e/%Y at %w:%M %p")}, Last modified on #{task.updated_at.strftime("%m/%e/%Y at %w:%M %p")}" %>">
+		<%= task.title %>
+		</span>
+	  </td>
       <td class = 'info'><%= task.text %>  </td> 
       <td><%= link_to 'Show', task_path(task), class: 'btn btn-primary btn-xs' %></td>
 	  <td><%= link_to 'Edit', edit_task_path(task), class: 'btn btn-info btn-xs'  %></td>
