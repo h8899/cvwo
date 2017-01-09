@@ -12147,3 +12147,599 @@ Content-Transfer-Encoding: 7bit
 Completed 200 OK in 2274ms (Views: 72.1ms | ActiveRecord: 3.0ms)
 
 
+Started GET "/" for ::1 at 2017-01-09 11:11:24 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 323ms (Views: 311.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-09 11:11:36 +0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 60ms (Views: 52.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for ::1 at 2017-01-09 11:14:29 +0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT DISTINCT "tasks".* FROM "tasks"[0m
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (43.5ms)
+Completed 200 OK in 140ms (Views: 101.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for ::1 at 2017-01-09 11:14:42 +0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (47.6ms)
+  Rendered tasks/new.html.erb within layouts/application (59.6ms)
+Completed 200 OK in 129ms (Views: 118.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for ::1 at 2017-01-09 11:14:50 +0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT DISTINCT "tasks".* FROM "tasks"[0m
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 72ms (Views: 56.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for ::1 at 2017-01-09 11:15:04 +0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (4.0ms)
+  Rendered tasks/new.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 81ms (Views: 69.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for ::1 at 2017-01-09 11:15:21 +0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8nPdkKZlnRFB0cR9YP6bcGKTGbaO5aOz9L8yfyh+pN+DZTTFgmvpm9HVs7OXsaa4nEV4SPkfx1pBa/GjQpDURg==", "task"=>{"title"=>"1/9 11:45", "text"=>"Check the second time", "tag_list"=>""}, "commit"=>"Create Task"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "text", "created_at", "updated_at", "completed") VALUES (?, ?, ?, ?, ?)[0m  [["title", "1/9 11:45"], ["text", "Check the second time"], ["created_at", 2017-01-09 04:15:21 UTC], ["updated_at", 2017-01-09 04:15:21 UTC], ["completed", false]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks/20
+Completed 302 Found in 17ms (ActiveRecord: 4.8ms)
+
+
+Started GET "/tasks/20" for ::1 at 2017-01-09 11:15:21 +0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."task_id" = ?[0m  [["task_id", 20]]
+  Rendered tasks/show.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 80ms (Views: 60.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/tasks" for ::1 at 2017-01-09 11:15:23 +0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT DISTINCT "tasks".* FROM "tasks"[0m
+  Rendering example_mailer/sample_email.html.erb within layouts/mailer
+  Rendered example_mailer/sample_email.html.erb within layouts/mailer (0.0ms)
+  Rendering example_mailer/sample_email.text.erb within layouts/mailer
+  Rendered example_mailer/sample_email.text.erb within layouts/mailer (4.0ms)
+ExampleMailer#sample_email: processed outbound mail in 301.9ms
+Sent mail to lth08091998@gmail.com (2021.4ms)
+Date: Mon, 09 Jan 2017 11:15:23 +0700
+From: letrunghieusingapore@gmail.com
+To: lth08091998@gmail.com
+Message-ID: <58730e5bd7a1c_2c28346d270495d1@DESKTOP-LQBQLPP.mail>
+Subject: Reminder
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_58730e5bd62a0_2c28346d27049449";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_58730e5bd62a0_2c28346d27049449
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+You are reminded to Check the second time at 1/9 11:45
+
+----==_mimepart_58730e5bd62a0_2c28346d27049449
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>
+      You are reminded to Check the second time 
+    </p>
+	<p>
+	  At 1/9 11:45
+	</p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_58730e5bd62a0_2c28346d27049449--
+
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 2829ms (Views: 63.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/20" for ::1 at 2017-01-09 11:15:45 +0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  [1m[36mTag Load (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."task_id" = ?[0m  [["task_id", 20]]
+  Rendered tasks/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 79ms (Views: 61.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/complete/20" for ::1 at 2017-01-09 11:15:46 +0700
+Processing by TasksController#complete as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.0ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", true], ["updated_at", 2017-01-09 04:15:46 UTC], ["id", 20]]
+  [1m[35m (18.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 28ms (ActiveRecord: 22.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-01-09 11:15:46 +0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT DISTINCT "tasks".* FROM "tasks"[0m
+  Rendering example_mailer/sample_email.html.erb within layouts/mailer
+  Rendered example_mailer/sample_email.html.erb within layouts/mailer (4.0ms)
+  Rendering example_mailer/sample_email.text.erb within layouts/mailer
+  Rendered example_mailer/sample_email.text.erb within layouts/mailer (4.0ms)
+ExampleMailer#sample_email: processed outbound mail in 144.8ms
+Sent mail to lth08091998@gmail.com (2020.2ms)
+Date: Mon, 09 Jan 2017 11:15:47 +0700
+From: letrunghieusingapore@gmail.com
+To: lth08091998@gmail.com
+Message-ID: <58730e73163bc_2c28346d46449719@DESKTOP-LQBQLPP.mail>
+Subject: Reminder
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_58730e731542b_2c28346d464496a";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_58730e731542b_2c28346d464496a
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+You are reminded to Check the second time at 1/9 11:45
+
+----==_mimepart_58730e731542b_2c28346d464496a
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>
+      You are reminded to Check the second time 
+    </p>
+	<p>
+	  At 1/9 11:45
+	</p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_58730e731542b_2c28346d464496a--
+
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 2241ms (Views: 59.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/20" for ::1 at 2017-01-09 11:15:51 +0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  [1m[36mTag Load (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."task_id" = ?[0m  [["task_id", 20]]
+  Rendered tasks/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 79ms (Views: 65.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tasks" for ::1 at 2017-01-09 11:15:53 +0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT DISTINCT "tasks".* FROM "tasks"[0m
+  Rendering example_mailer/sample_email.html.erb within layouts/mailer
+  Rendered example_mailer/sample_email.html.erb within layouts/mailer (0.0ms)
+  Rendering example_mailer/sample_email.text.erb within layouts/mailer
+  Rendered example_mailer/sample_email.text.erb within layouts/mailer (0.0ms)
+ExampleMailer#sample_email: processed outbound mail in 144.2ms
+Sent mail to lth08091998@gmail.com (2011.9ms)
+Date: Mon, 09 Jan 2017 11:15:53 +0700
+From: letrunghieusingapore@gmail.com
+To: lth08091998@gmail.com
+Message-ID: <58730e7945d4d_2c28346d324499a4@DESKTOP-LQBQLPP.mail>
+Subject: Reminder
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_58730e7945d4d_2c28346d3244981e";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_58730e7945d4d_2c28346d3244981e
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+You are reminded to Check the second time at 1/9 11:45
+
+----==_mimepart_58730e7945d4d_2c28346d3244981e
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>
+      You are reminded to Check the second time 
+    </p>
+	<p>
+	  At 1/9 11:45
+	</p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_58730e7945d4d_2c28346d3244981e--
+
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 2233ms (Views: 59.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/20" for ::1 at 2017-01-09 11:15:58 +0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mTask Load (4.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  [1m[36mTag Load (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."task_id" = ?[0m  [["task_id", 20]]
+  Rendered tasks/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 82ms (Views: 65.2ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/tasks/20/edit" for ::1 at 2017-01-09 11:16:00 +0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  [1m[36mTag Load (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."task_id" = ?[0m  [["task_id", 20]]
+  Rendered tasks/_form.html.erb (4.0ms)
+  Rendered tasks/edit.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 86ms (Views: 71.8ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/tasks/20" for ::1 at 2017-01-09 11:16:05 +0700
+Processing by TasksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3F9EdZdsuNHfqFRE/F+mqYsxLHMxfO0TeMq3HsUJrDitSa0gs2LMW0+sI4oLEJthdedNjUaGifrNHnTCr+fcoQ==", "task"=>{"title"=>"1/9 11:45", "text"=>"Check the second time on ROR", "tag_list"=>""}, "commit"=>"Update Task", "id"=>"20"}
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTag Load (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."task_id" = ?[0m  [["task_id", 20]]
+  [1m[35mSQL (0.0ms)[0m  [1m[33mUPDATE "tasks" SET "text" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["text", "Check the second time on ROR"], ["updated_at", 2017-01-09 04:16:05 UTC], ["id", 20]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks/20
+Completed 302 Found in 21ms (ActiveRecord: 12.0ms)
+
+
+Started GET "/tasks/20" for ::1 at 2017-01-09 11:16:05 +0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  [1m[36mTag Load (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."task_id" = ?[0m  [["task_id", 20]]
+  Rendered tasks/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 71ms (Views: 58.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/complete/20" for ::1 at 2017-01-09 11:16:07 +0700
+Processing by TasksController#complete as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for ::1 at 2017-01-09 11:16:07 +0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT DISTINCT "tasks".* FROM "tasks"[0m
+  Rendering example_mailer/sample_email.html.erb within layouts/mailer
+  Rendered example_mailer/sample_email.html.erb within layouts/mailer (0.0ms)
+  Rendering example_mailer/sample_email.text.erb within layouts/mailer
+  Rendered example_mailer/sample_email.text.erb within layouts/mailer (0.0ms)
+ExampleMailer#sample_email: processed outbound mail in 152.0ms
+Started GET "/tasks" for ::1 at 2017-01-09 11:16:09 +0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT DISTINCT "tasks".* FROM "tasks"[0m
+  Rendering example_mailer/sample_email.html.erb within layouts/mailer
+  Rendered example_mailer/sample_email.html.erb within layouts/mailer (0.0ms)
+  Rendering example_mailer/sample_email.text.erb within layouts/mailer
+  Rendered example_mailer/sample_email.text.erb within layouts/mailer (0.0ms)
+ExampleMailer#sample_email: processed outbound mail in 143.6ms
+Sent mail to lth08091998@gmail.com (2018.2ms)
+Date: Mon, 09 Jan 2017 11:16:07 +0700
+From: letrunghieusingapore@gmail.com
+To: lth08091998@gmail.com
+Message-ID: <58730e8762253_2c28346d3c45019@DESKTOP-LQBQLPP.mail>
+Subject: Reminder
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_58730e87612c8_2c28346d3c45009b";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_58730e87612c8_2c28346d3c45009b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+You are reminded to Check the second time on ROR at 1/9 11:45
+
+----==_mimepart_58730e87612c8_2c28346d3c45009b
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>
+      You are reminded to Check the second time on ROR 
+    </p>
+	<p>
+	  At 1/9 11:45
+	</p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_58730e87612c8_2c28346d3c45009b--
+
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 2250ms (Views: 63.8ms | ActiveRecord: 0.0ms)
+
+
+Sent mail to lth08091998@gmail.com (2013.9ms)
+Date: Mon, 09 Jan 2017 11:16:09 +0700
+From: letrunghieusingapore@gmail.com
+To: lth08091998@gmail.com
+Message-ID: <58730e8932e6d_2c28346d324503d0@DESKTOP-LQBQLPP.mail>
+Subject: Reminder
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_58730e8931eec_2c28346d324502c8";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_58730e8931eec_2c28346d324502c8
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+You are reminded to Check the second time on ROR at 1/9 11:45
+
+----==_mimepart_58730e8931eec_2c28346d324502c8
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>
+      You are reminded to Check the second time on ROR 
+    </p>
+	<p>
+	  At 1/9 11:45
+	</p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_58730e8931eec_2c28346d324502c8--
+
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 2233ms (Views: 61.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/20" for ::1 at 2017-01-09 11:16:14 +0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  [1m[36mTag Load (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."task_id" = ?[0m  [["task_id", 20]]
+  Rendered tasks/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 85ms (Views: 69.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/20/edit" for ::1 at 2017-01-09 11:16:16 +0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  [1m[36mTag Load (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."task_id" = ?[0m  [["task_id", 20]]
+  Rendered tasks/_form.html.erb (8.0ms)
+  Rendered tasks/edit.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 93ms (Views: 74.5ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/tasks/20" for ::1 at 2017-01-09 11:16:20 +0700
+Processing by TasksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aKDjWJ0rTpC1HJdiFOOKkMUHfdiunqgE3s6MF9r8U34ZtgoNuSU6GiUY4KzjrLdYO9EcJtlkzO1rGk/LsBIj5w==", "task"=>{"title"=>"1/9 11:45", "text"=>"Check the second time on RoR", "tag_list"=>""}, "commit"=>"Update Task", "id"=>"20"}
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTag Load (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."task_id" = ?[0m  [["task_id", 20]]
+  [1m[35mSQL (0.0ms)[0m  [1m[33mUPDATE "tasks" SET "text" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["text", "Check the second time on RoR"], ["updated_at", 2017-01-09 04:16:20 UTC], ["id", 20]]
+  [1m[35m (12.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks/20
+Completed 302 Found in 24ms (ActiveRecord: 12.2ms)
+
+
+Started GET "/tasks/20" for ::1 at 2017-01-09 11:16:20 +0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  [1m[36mTag Load (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."task_id" = ?[0m  [["task_id", 20]]
+  Rendered tasks/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 69ms (Views: 58.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for ::1 at 2017-01-09 11:16:22 +0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT DISTINCT "tasks".* FROM "tasks"[0m
+  Rendering example_mailer/sample_email.html.erb within layouts/mailer
+  Rendered example_mailer/sample_email.html.erb within layouts/mailer (0.0ms)
+  Rendering example_mailer/sample_email.text.erb within layouts/mailer
+  Rendered example_mailer/sample_email.text.erb within layouts/mailer (0.0ms)
+ExampleMailer#sample_email: processed outbound mail in 148.3ms
+Sent mail to lth08091998@gmail.com (2012.6ms)
+Date: Mon, 09 Jan 2017 11:16:22 +0700
+From: letrunghieusingapore@gmail.com
+To: lth08091998@gmail.com
+Message-ID: <58730e9656bba_2c28346d3c4505ae@DESKTOP-LQBQLPP.mail>
+Subject: Reminder
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_58730e9656bba_2c28346d3c4504a6";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_58730e9656bba_2c28346d3c4504a6
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+You are reminded to Check the second time on RoR at 1/9 11:45
+
+----==_mimepart_58730e9656bba_2c28346d3c4504a6
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>
+      You are reminded to Check the second time on RoR 
+    </p>
+	<p>
+	  At 1/9 11:45
+	</p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_58730e9656bba_2c28346d3c4504a6--
+
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 2237ms (Views: 61.4ms | ActiveRecord: 0.0ms)
+
+
