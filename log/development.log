@@ -12743,3 +12743,152 @@ Content-Transfer-Encoding: 7bit
 Completed 200 OK in 2237ms (Views: 61.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2017-01-09 11:37:58 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 335ms (Views: 315.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for ::1 at 2017-01-09 11:38:10 +0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT DISTINCT "tasks".* FROM "tasks"[0m
+  Rendering example_mailer/sample_email.html.erb within layouts/mailer
+  Rendered example_mailer/sample_email.html.erb within layouts/mailer (0.5ms)
+  Rendering example_mailer/sample_email.text.erb within layouts/mailer
+  Rendered example_mailer/sample_email.text.erb within layouts/mailer (0.0ms)
+ExampleMailer#sample_email: processed outbound mail in 272.3ms
+Sent mail to lth08091998@gmail.com (2024.2ms)
+Date: Mon, 09 Jan 2017 11:38:10 +0700
+From: letrunghieusingapore@gmail.com
+To: lth08091998@gmail.com
+Message-ID: <587313b2e7a52_2f083482df098177@DESKTOP-LQBQLPP.mail>
+Subject: Reminder
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_587313b2e5b07_2f083482df098057";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_587313b2e5b07_2f083482df098057
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+You are reminded to Check the second time on RoR at 1/9 11:45
+
+----==_mimepart_587313b2e5b07_2f083482df098057
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>
+      You are reminded to Check the second time on RoR 
+    </p>
+	<p>
+	  At 1/9 11:45
+	</p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_587313b2e5b07_2f083482df098057--
+
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 2781ms (Views: 100.8ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-09 11:39:23 +0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 63ms (Views: 61.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for ::1 at 2017-01-09 11:39:24 +0700
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.0ms)[0m  [1m[34mSELECT DISTINCT "tasks".* FROM "tasks"[0m
+  Rendering example_mailer/sample_email.html.erb within layouts/mailer
+  Rendered example_mailer/sample_email.html.erb within layouts/mailer (0.0ms)
+  Rendering example_mailer/sample_email.text.erb within layouts/mailer
+  Rendered example_mailer/sample_email.text.erb within layouts/mailer (4.0ms)
+ExampleMailer#sample_email: processed outbound mail in 154.8ms
+Sent mail to lth08091998@gmail.com (2012.3ms)
+Date: Mon, 09 Jan 2017 11:39:25 +0700
+From: letrunghieusingapore@gmail.com
+To: lth08091998@gmail.com
+Message-ID: <587313fd1279a_2f083482df0983d6@DESKTOP-LQBQLPP.mail>
+Subject: Reminder
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_587313fd117f4_2f083482df0982e7";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_587313fd117f4_2f083482df0982e7
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+You are reminded to Check the second time on RoR at 1/9 11:45
+
+----==_mimepart_587313fd117f4_2f083482df0982e7
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>
+      You are reminded to Check the second time on RoR 
+    </p>
+	<p>
+	  At 1/9 11:45
+	</p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_587313fd117f4_2f083482df0982e7--
+
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 2255ms (Views: 68.1ms | ActiveRecord: 0.0ms)
+
+
