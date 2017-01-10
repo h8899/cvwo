@@ -34,21 +34,32 @@ class TasksController < ApplicationController
  
 	def create
 		@task = Task.new(task_params)
-		@task.completed = false
-		if @task.save
-			redirect_to @task
-		else
-			render 'new'
+
+		respond_to do |format|		
+			if @task.save
+				flash[:success] = 'Task was successfully created.'
+				format.html { redirect_to @task }
+				format.json { render :show, status: :created, location: @task }
+			else
+				flash[:danger] = 'There was a problem creating the task.'
+				format.html { render :new }
+				format.json { render json: @task.errors, status: :unprocessable_entity }
+			end
 		end
 	end
  
 	def update
 		@task = Task.find(params[:id])
- 
-		if @task.update(task_params)
-			redirect_to @task
-		else
-			render 'edit'
+		respond_to do |format|
+			if @task.update(task_params)
+				flash[:success] = 'Todo was successfully updated.'
+				format.html { redirect_to @task}
+				format.json { render :show, status: :ok, location: @task }
+			else
+				flash[:danger] = 'There was a problem updating the Todo.'
+				format.html { render :edit }
+				format.json { render json: @task.errors, status: :unprocessable_entity }
+			end
 		end
 	end
  
