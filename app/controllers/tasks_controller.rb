@@ -1,7 +1,6 @@
 class TasksController < ApplicationController 
 	def index
-		@q = Task.ransack(params[:q])
-		@tasks = @q.result(distinct: true)
+		@tasks = Task.all
 		@tasks.each do|task|
 			day = Time.now - Time.parse(task.title)
 			# I send email to remind one hour before the task
@@ -11,6 +10,10 @@ class TasksController < ApplicationController
 			task.title = Time.parse(task.title)
 		end
 		@tasks = @tasks.sort_by { |a| [a.completed ? 1 : 0, a.title] }
+		respond_to do |format|
+			format.html
+			format.json
+		end
 	end
 
 	def complete
@@ -30,6 +33,9 @@ class TasksController < ApplicationController
   
 	def new
 		@task = Task.new
+		respond_to do |format|
+			format.js { }
+		end
 	end
  
 	def create

@@ -1,15 +1,9 @@
 <h1>Listing Tasks</h1>
-<%= link_to new_task_path, class: 'btn btn-success' do%>
- <i class="glyphicon glyphicon-plus"></i> New Task
+<%= link_to new_task_path, remote: true do %>
+    <button class="btn btn-default">New</button>
 <% end %>
 <%= link_to 'Tags list', controller: 'tags' %>
-
-<%= search_form_for @q do |f| %>
-	<%= f.label :Time %>
-	<%= f.search_field :title_cont %>
-	<%= f.submit %>
-<% end %>
-
+<div id="task-form" style="display:none;"></div>
 <table class = 'table table-bordered'>
 	<tr>
 		<th>Status</th>
