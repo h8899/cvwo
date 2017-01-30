@@ -15,7 +15,9 @@ gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
-gem 'sqlite3'
+gem 'sqlite3', group: :development # Added development group.
+  gem 'pg', group: :production # Added postgres and made it production only.
+  gem 'rails_12factor'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 
